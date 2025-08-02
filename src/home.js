@@ -6,6 +6,7 @@ import { CiPercent } from "react-icons/ci";
 import { ImHeadphones } from "react-icons/im";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import Homeproduit from './homeproduit'
 import './home.css'; // Assuming you have a CSS file for styling
@@ -48,14 +49,6 @@ const Home = () => {
                   </div>
                   <div className="detail">
                      <p>21produit</p>
-                  </div>
-              </div>
-              <div className="box">
-                  <div className="img_box">
-                     <img src="/applevisionpro.png" alt="watch" />
-                  </div>
-                  <div className="detail">
-                     <p>10 produit</p>
                   </div>
               </div>
               <div className="box">
@@ -132,6 +125,19 @@ const Home = () => {
                )
             })
          }
+      </div>
+    </div>
+    <div className="banner">
+      <div className="container">
+         <div className="detail">
+            <h4>LATEST TECHNOLOGY ADDED</h4>
+            <h3>Apple Ipad 18th Gen 13 inch - 2025</h3>
+            <p><BiDollar />837</p>
+            <Link to='/product' className='link'>Shop Now<FaArrowRight /></Link>
+         </div>
+         <div className="img_box">
+            <img src="/ipad-3.png" alt="slidering" />
+         </div>
       </div>
     </div>
     </>
