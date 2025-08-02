@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiTruck } from "react-icons/fi";
 import { BiDollar } from "react-icons/bi";
 import { CiPercent } from "react-icons/ci";
 import { ImHeadphones } from "react-icons/im";
+import { IoEyeOutline } from "react-icons/io5";
+import { FaShoppingCart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import Homeproduit from './homeproduit'
 import './home.css'; // Assuming you have a CSS file for styling
 const Home = () => {
+// const [homeProduit, setHomeProduit] = useState(Homeproduit)
   return (
     <>
       <div className="top_banner">
@@ -104,9 +109,29 @@ const Home = () => {
          </div>
       </div>
     <div className="produit">
+      <h2>Top Products</h2>
       <div className="container">
-              <div className="box">
-              </div>
+         {
+            Homeproduit.map((cur) => {
+               return (
+                  <div className="box" key={cur.id}>
+                     <div className="img_box">
+                        <img src={cur.Img} alt={cur.Title}></img>
+                        <div className="icon">
+                           <li><FaShoppingCart /></li>
+                           <li><IoEyeOutline /></li>
+                           <li><CiHeart /></li>
+                        </div>
+                     </div>
+                     <div className="detail">
+                        <p>{cur.Cat}</p>
+                        <h3>{cur.Title}</h3>
+                        <h4>{cur.Price}</h4>
+                     </div>
+                  </div>
+               )
+            })
+         }
       </div>
     </div>
     </>
