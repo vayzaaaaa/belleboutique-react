@@ -1,45 +1,45 @@
 const Homeproduit = [
     {
         id: 1, 
-        Title: "Iphone 15 Pro Max", 
+        Title: "Ipad Pro 18th Gen - 2025", 
         Cat: "Tablet",
-        Price: "$372", 
-        Img: "/iphone15.png"
+        Price: "$899", 
+        Img: "/ipad-3.png"
     },
     {
-        id: 2, 
+        id: 2   , 
         Title: "Iphone 15 Pro Max", 
-        Cat: "Tablet",
-        Price: "$372", 
+        Cat: "Phone",
+        Price: "$999", 
         Img: "/iphone15.png"
     },
     {
         id: 3, 
-        Title: "Iphone 15 Pro Max", 
-        Cat: "Tablet",
-        Price: "$372", 
-        Img: "/iphone15.png"
+        Title: "Apple airpods max", 
+        Cat: "Headphones",
+        Price: "$379", 
+        Img: "/airpods.webp"
     },
     {
         id: 4, 
-        Title: "Iphone 15 Pro Max", 
-        Cat: "Tablet",
-        Price: "$372", 
-        Img: "/iphone15.png"
+        Title: "Apple Watch 11th Gen", 
+        Cat: "Watch",
+        Price: "$629", 
+        Img: "/watch.png"
     },
     {
         id: 5, 
-        Title: "Iphone 15 Pro Max", 
-        Cat: "Tablet",
-        Price: "$372", 
-        Img: "/iphone15.png"
+        Title: "PlayStation Ps5", 
+        Cat: "Gaming",
+        Price: "$499", 
+        Img: "/ps5-console.png"
     },
     {
         id: 6, 
-        Title: "Iphone 15 Pro Max", 
-        Cat: "Tablet",
-        Price: "$372", 
-        Img: "/iphone15.png"
-    },
+        Title: "Alpha 7 III Digital E-Mount Camera with 35mm Full Frame Image Sensor (Body only)", 
+        Cat: "Camera",
+        Price: "$759", 
+        Img: "/sony-cam.webp"
+    }
 ]
 export default Homeproduit

@@ -1,11 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
+import { IoEyeOutline, IoCloseCircleOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import productdetail from './productdetail'; // Assuming you have a product detail component
-const Product = () => {
+const Product = ({product, setProduct, detail, view, close, setClose}) => {
+  const filterproduct = (cat) => {
+    const filtered = productdetail.filter(pro => pro.Cat === cat);
+    console.log(filtered)
+    setProduct(filtered);
+  }
+  const AllProducts = () => {
+    setProduct(productdetail);
+  }
   return (
     <>
+     { 
+      close ? 
+      <div className="product_detail">
+        <div className="container">
+        <button onClick={() => setClose(false)}><IoCloseCircleOutline /></button>
+          {
+            detail.map((cur) => {
+              return (
+                <div className="productbox">
+                  <div className="img_box">
+                    <img src={cur.Img} alt={cur.Title} />
+                  </div>
+                  <div className="detail">
+                    <h4>{cur.Cat}</h4>
+                    <h2>{cur.Title}</h2>
+                    <p>WE ARE ALWAYS PRESENTING TO YOU THE BEST PRODUCTS, SUITABLE FOR YOUR NEEDS..</p>
+                    <h3>{cur.Price}</h3>
+                    <button>ADD TO CART</button>
+                  </div>
+
+                </div>
+              )
+            } 
+            )
+          }
+        </div>
+      </div> : null
+      }
      <h2># Products</h2>
       <p> Homme . products</p>
       <div className="products">
@@ -14,34 +50,35 @@ const Product = () => {
             <div className="categories">
                 <h3>Categories</h3>
                 <ul>
-                    <li>Tablet</li>
-                    <li>Tablet</li>
-                    <li>Tablet</li>
-                    <li>Tablet</li>
-                    <li>Tablet</li>
+                    <li onClick={() => AllProducts()}><button>All products</button></li>
+                    <li onClick={() => filterproduct("Tablet")}><button>Tablet</button></li>
+                    <li onClick={() => filterproduct("Phone")}><button>Phone</button></li>
+                    <li onClick={() => filterproduct("Headphones")}><button>Headphones</button></li>
+                    <li onClick={() => filterproduct("Camera")}><button>Camera</button></li>
+                    <li onClick={() => filterproduct("Gaming")}><button>Gaming</button></li>
                 </ul>
              </div>
           </div>
             <div className="productbox">
                 {
-                productdetail.map((cur) => {
+                product.map((cur) => {
                     return (
                     <>
-                       <div className="box" key={cur.id}>
-                                   <div className="img_box">
-                                             <img src={cur.Img} alt={cur.Title}></img>
-                                             <div className="icon">
-                                                <li><FaShoppingCart /></li>
-                                                <li><IoEyeOutline /></li>
-                                                <li><CiHeart /></li>
-                                             </div>
-                                          </div>
-                                          <div className="detail">
-                                             <p>{cur.Cat}</p>
-                                             <h3>{cur.Title}</h3>
-                                             <h4>{cur.Price}</h4>
-                                          </div>
-                                   </div>
+                      <div className="box" key={cur.id}>
+                        <div className="img_box">
+                          <img src={cur.Img} alt={cur.Title}></img>
+                          <div className="icon">
+                            <li><FaShoppingCart /></li>
+                            <li onClick={() => view(cur)}><IoEyeOutline /></li>
+                            <li><CiHeart /></li>
+                          </div>
+                        </div>
+                        <div className="detail">
+                          <p>{cur.Cat}</p>
+                          <h3>{cur.Title}</h3>
+                          <h4>{cur.Price}</h4>
+                        </div>
+                      </div>
                     </>
                     )
                 })
