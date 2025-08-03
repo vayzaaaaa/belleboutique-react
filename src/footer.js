@@ -3,7 +3,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { TiSocialTwitter } from "react-icons/ti";
 import { FaYoutube } from "react-icons/fa";
-import './footer.css'; // Assuming you have a CSS file for styling
+import './footer.css'; // Import the new footer.css file
+
 const Footer = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="container">
           <div className="about">
             <div className="logo">
-              <img src="./img-logo" alt="logo" />
+              <img src="./img-logo" alt="logo" /> {/* Ensure this path is correct for your logo */}
             </div>
             <div className="detail">
               <p>We are team of designers and developers that create high quality </p>
@@ -36,10 +37,10 @@ const Footer = () => {
              <div className="page">
               <h3>Page</h3>
               <ul>
-                <li>Homme</li>
+                <li>Home</li> {/* Corrected 'Homme' to 'Home' */}
                 <li>About</li>
                 <li>Contact</li>
-                <li>Terma $ condition</li>
+                <li>Terms & condition</li> {/* Corrected 'Terma $ condition' */}
               </ul>
             </div>
         </div>

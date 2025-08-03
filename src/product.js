@@ -3,6 +3,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoEyeOutline, IoCloseCircleOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import productdetail from './productdetail'; // Assuming you have a product detail component
+import './product.css'; // Import the new product.css file
+
 const Product = ({product, setProduct, detail, view, close, setClose}) => {
   const filterproduct = (cat) => {
     const filtered = productdetail.filter(pro => pro.Cat === cat);
@@ -14,15 +16,15 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
   }
   return (
     <>
-     { 
-      close ? 
+     {
+      close ?
       <div className="product_detail">
         <div className="container">
         <button onClick={() => setClose(false)}><IoCloseCircleOutline /></button>
           {
             detail.map((cur) => {
               return (
-                <div className="productbox">
+                <div className="productbox" key={cur.id}>
                   <div className="img_box">
                     <img src={cur.Img} alt={cur.Title} />
                   </div>
@@ -36,7 +38,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
 
                 </div>
               )
-            } 
+            }
             )
           }
         </div>
@@ -63,8 +65,9 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                 {
                 product.map((cur) => {
                     return (
-                    <>
-                      <div className="box" key={cur.id}>
+                    // Added a fragment here to wrap the individual product box
+                    <React.Fragment key={cur.id}>
+                      <div className="box">
                         <div className="img_box">
                           <img src={cur.Img} alt={cur.Title}></img>
                           <div className="icon">
@@ -79,7 +82,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                           <h4>{cur.Price}</h4>
                         </div>
                       </div>
-                    </>
+                    </React.Fragment>
                     )
                 })
                 }

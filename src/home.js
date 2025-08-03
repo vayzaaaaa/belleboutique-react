@@ -9,7 +9,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import Homeproduit from './homeproduit'
-import './home.css'; // Assuming you have a CSS file for styling
+import './home.css'; // Import the new home.css file
+
 const Home = () => {
 // const [homeProduit, setHomeProduit] = useState(Homeproduit)
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         <div className="container">
           <div className="detail">
              <h1>The Best Notebook Collection 2025</h1>
-             <Link to="/produit" className='link'>Shop Now</Link>
+             <Link to="/products" className='link'>Shop Now</Link>
           </div>
           <div className="image_box">
               <img src="/ipad-3.png" alt="sliderimg" />
@@ -133,7 +134,7 @@ const Home = () => {
             <h4>LATEST TECHNOLOGY ADDED</h4>
             <h3>Apple Ipad 18th Gen 13 inch - 2025</h3>
             <p><BiDollar />837</p>
-            <Link to='/product' className='link'>Shop Now<FaArrowRight /></Link>
+            <Link to='/products' className='link'>Shop Now<FaArrowRight /></Link>
          </div>
          <div className="img_box">
             <img src="/ipad-3.png" alt="slidering" />

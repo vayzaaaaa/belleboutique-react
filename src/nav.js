@@ -4,7 +4,7 @@ import { CiHeart, CiUser, CiLogin, CiLogout } from 'react-icons/ci';
 import { IoBagCheckOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import './nav.css';
+import './nav.css'; // Import the new nav.css file
 
 const Nav = ({searchBtn}) => {
   const [search, setSearch] = useState('');
