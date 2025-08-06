@@ -8,7 +8,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
-import Homeproduit from './homeproduit'
+import Homeproduit from './homeproduit';
 import './home.css'; // Import the new home.css file
 
 const Home = () => {

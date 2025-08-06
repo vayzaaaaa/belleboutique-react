@@ -52,7 +52,7 @@ const Nav = ({searchBtn}) => {
               <Link to="/" className="Link">
                 <CiHeart />
               </Link>
-              <Link to="/cart" className="Link">
+              <Link to="/" className="Link">
                 <IoBagCheckOutline />
               </Link>
             </div>

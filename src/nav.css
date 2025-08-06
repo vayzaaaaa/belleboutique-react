@@ -8,7 +8,7 @@
 /* Free Shipping Banner */
 .free {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: rgb(209, 253, 47);
   text-align: center;
   padding: 12px 0;
   display: flex;
@@ -25,10 +25,10 @@
 
 /* Main Header */
 .main-header {
-  background: #ffffff;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  background: #8eb4ec;
+  box-shadow: 0 2px 20px rgba(250, 241, 241, 0.06);
   padding: 20px 0;
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid #fbfbfb;
 }
 
 .main-header .container {
@@ -127,7 +127,7 @@
 }
 
 .account p {
-  color: #495057;
+  color: #eaf0f6;
   font-weight: 500;
   font-size: 14px;
 }

@@ -5,6 +5,8 @@ import Footer from './footer'
 import productdetail from './productdetail'; // Assuming you have a product detail component
 import {BrowserRouter} from "react-router-dom";
 const App = () => {
+  // add to cart
+  const [cartItem, setCartItem] = useState([]);
   // PRODUCT DETAILS
   const [close, setClose] = useState(false);
   const [detail, setDetail] = useState([]);
@@ -19,11 +21,22 @@ const App = () => {
     setDetail([{...product}])
     setClose(true)
   }
+  // add to cart
+  const addtocart = (product) => 
+    {
+      const exist = cartItem.find((X) => 
+     { 
+     return X.id === product.id
+     })
+    }
   return (
     <>
     <BrowserRouter> 
     <Nav searchBtn={searchBtn}/>
-    <Rout product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose}/>
+
+
+
+    <Rout product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose}  cartItem={cartItem}  setCartItem={setCartItem} addtocart={addtocart}/>
     <Footer />
     </BrowserRouter>
     </>

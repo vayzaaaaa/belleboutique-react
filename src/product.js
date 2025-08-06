@@ -33,7 +33,7 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                     <h2>{cur.Title}</h2>
                     <p>WE ARE ALWAYS PRESENTING TO YOU THE BEST PRODUCTS, SUITABLE FOR YOUR NEEDS..</p>
                     <h3>{cur.Price}</h3>
-                    <button>ADD TO CART</button>
+                    <button>BUY NOW!</button>
                   </div>
 
                 </div>
@@ -72,8 +72,8 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                           <img src={cur.Img} alt={cur.Title}></img>
                           <div className="icon">
                             <li><FaShoppingCart /></li>
-                            <li onClick={() => view(cur)}><IoEyeOutline /></li>
-                            <li><CiHeart /></li>
+                            <li onClick={() => view (cur)}><IoEyeOutline /></li>
+                            <li ><CiHeart /></li>
                           </div>
                         </div>
                         <div className="detail">
