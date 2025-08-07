@@ -46,10 +46,10 @@ const Home = () => {
               </div>
               <div className="box">
                   <div className="img_box">
-                     <img src="/airpods_max_black_1.webp" alt="watch" />
+                     <img src="/airpods.webp" alt="airpods" />
                   </div>
                   <div className="detail">
-                     <p>21produit</p>
+                     <p>21 produit</p>
                   </div>
               </div>
               <div className="box">

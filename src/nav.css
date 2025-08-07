@@ -1,110 +1,89 @@
-/* Navigation Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Free Shipping Banner */
+/* Navbar Styles */
 .free {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: rgb(209, 253, 47);
-  text-align: center;
-  padding: 12px 0;
+  background-color: #e3f2fd; /* Baby blue */
+  color: #333; /* Dark grey for contrast */
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 14px;
-  font-weight: 500;
 }
 
 .free .icon {
   font-size: 16px;
 }
 
-/* Main Header */
 .main-header {
-  background: #8eb4ec;
-  box-shadow: 0 2px 20px rgba(250, 241, 241, 0.06);
   padding: 20px 0;
-  border-bottom: 1px solid #fbfbfb;
+  border-bottom: 1px solid #e0e0e0; /* Light grey */
+  background-color: #f8f9fa; /* Off white */
 }
 
 .main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
 }
 
+/* Updated Logo Styles */
 .logo {
-  width: 120px;
-  height: 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  /* Remove fixed height/width to avoid affecting parent div */
 }
 
-.logo::before {
-  content: "SHOP";
+.logo img {
+  margin-bottom: 0;
+  width: 180px; /* Increase logo size */
+  height: 120px; /* Increase logo size */
+  max-width: 100%;
+  object-fit: contain;
 }
 
-/* Search Box */
-.search_box {
-  flex: 1;
-  max-width: 500px;
+/* Adjust header layout */
+.main-header .container {
   display: flex;
-  background: #f8f9fa;
-  border-radius: 25px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
 }
 
-.search_box:focus-within {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+.search_box {
+  display: flex;
+  width: 40%;
 }
 
 .search_box input {
-  flex: 1;
-  padding: 15px 20px;
-  border: none;
-  background: transparent;
-  outline: none;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #b0bec5; /* Soft grey */
+  border-radius: 4px 0 0 4px;
   font-size: 14px;
+  background-color: #f0f4f8; /* Very light blue */
   color: #333;
 }
 
-.search_box input::placeholder {
-  color: #9ca3af;
-}
-
 .search_box button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  padding: 0 20px;
+  background-color: #90caf9; /* Baby blue */
+  color: #333;
   border: none;
-  padding: 15px 25px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .search_box button:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  transform: translateY(-1px);
+  background-color: #64b5f6; /* Slightly darker baby blue */
 }
 
-/* Icons Section */
 .icon {
   display: flex;
   align-items: center;
@@ -114,22 +93,11 @@
 .account {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: #f8f9fa;
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: 2px solid #e9ecef;
+  gap: 8px;
 }
 
 .user_icon {
   font-size: 20px;
-  color: #667eea;
-}
-
-.account p {
-  color: #eaf0f6;
-  font-weight: 500;
-  font-size: 14px;
 }
 
 .second_icon {
@@ -137,101 +105,60 @@
   gap: 15px;
 }
 
-.second_icon .Link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  background: #f8f9fa;
-  border-radius: 50%;
-  color: #667eea;
+.second_icon a {
+  color: #607d8b; /* Grey blue */
   font-size: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid #e9ecef;
+  transition: color 0.3s;
 }
 
-.second_icon .Link:hover {
-  background: #667eea;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+.second_icon a:hover {
+  color: #90caf9; /* Baby blue */
 }
 
 /* Header Navigation */
 .header {
-  background: #ffffff;
-  border-bottom: 1px solid #f0f2f5;
   padding: 15px 0;
+  background-color: #f8f9fa; /* Off white */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Softer shadow */
 }
 
 .header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav ul {
   display: flex;
+  gap: 25px;
   list-style: none;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
 }
 
-.nav .link {
+.nav ul li a {
   text-decoration: none;
-  color: #495057;
+  color: #607d8b; /* Grey blue */
   font-weight: 500;
-  font-size: 15px;
-  position: relative;
-  transition: all 0.3s ease;
-  padding: 10px 0;
+  transition: color 0.3s;
 }
 
-.nav .link:hover {
-  color: #667eea;
+.nav ul li a:hover {
+  color: #90caf9; /* Baby blue */
 }
 
-.nav .link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  transition: width 0.3s ease;
-}
-
-.nav .link:hover::after {
-  width: 100%;
-}
-
-/* Auth Button */
 .auth button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: none;
   border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
+  font-size: 22px;
   cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  color: #607d8b; /* Grey blue */
+  transition: color 0.3s;
 }
 
 .auth button:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  color: #90caf9; /* Baby blue */
 }
 
 /* Responsive Design */
@@ -242,18 +169,10 @@
   }
   
   .search_box {
-    order: 3;
     width: 100%;
   }
   
   .nav ul {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .header .container {
-    flex-direction: column;
     gap: 15px;
   }
 }

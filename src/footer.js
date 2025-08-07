@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="container">
           <div className="about">
             <div className="logo">
-              <img src="./img-logo" alt="logo" /> {/* Ensure this path is correct for your logo */}
+              <img src="./logo.png" alt="logo" /> 
             </div>
             <div className="detail">
               <p>We are team of designers and developers that create high quality </p>
@@ -24,25 +24,27 @@ const Footer = () => {
               </div>
             </div>
           </div>
-            <div className="account">
-              <h3>My Account</h3>
-              <ul>
-                <li>My Account</li>
-                <li>Order</li>
-                <li>Cart</li>
-                <li>shipping</li>
-                <li>return</li>
-              </ul>
-            </div>
-             <div className="page">
-              <h3>Page</h3>
-              <ul>
-                <li>Home</li> {/* Corrected 'Homme' to 'Home' */}
-                <li>About</li>
-                <li>Contact</li>
-                <li>Terms & condition</li> {/* Corrected 'Terma $ condition' */}
-              </ul>
-            </div>
+          <div className="account">
+            <h3>My Account</h3>
+            <ul>
+              <li>My Account</li>
+              <li>Order</li>
+              <li>shipping</li>
+              <li>return</li>
+            </ul>
+          </div>
+          <div className="page">
+            <h3>Page</h3>
+            <ul>
+              <li>Home</li> 
+              <li>About</li>
+              <li>Contact</li>
+              <li>Terms & condition</li> 
+            </ul>
+          </div>
+        </div>
+        <div className="copyright">
+          <p>&copy; {new Date().getFullYear()} Belle Boutique. All rights reserved.</p>
         </div>
       </div>
     </>

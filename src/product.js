@@ -35,11 +35,9 @@ const Product = ({product, setProduct, detail, view, close, setClose}) => {
                     <h3>{cur.Price}</h3>
                     <button>BUY NOW!</button>
                   </div>
-
                 </div>
               )
-            }
-            )
+            })
           }
         </div>
       </div> : null

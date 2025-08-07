@@ -23,7 +23,9 @@ const Nav = ({searchBtn}) => {
       {/* Main Header */}
       <div className="main-header">
         <div className="container">
-          <div className="logo"></div>
+          <div className="logo">
+            <img src="/logo.png" alt="Logo" />
+          </div>
 
           {/* Search Box */}
           <div className="search_box">
